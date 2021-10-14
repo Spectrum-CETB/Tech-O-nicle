@@ -1,0 +1,126 @@
+div.maincontainer{
+    background-color: #388087;
+}
+div.maincontainer2{
+    background-color: yellow;
+}
+div.row{
+    height: 100%;
+    padding: 0 !important;
+}
+div.h{
+    height: 85%;
+    background-color: #388087;
+}
+div.hh{
+    height: 85%;
+    background-color: #388087;
+}
+div.content1{
+    padding: 13px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.content1 img{
+    max-width: 150px;
+    max-height: 102px;
+    min-width: 110px;
+    min-height: 90px;
+    margin-right: 16px;
+    object-fit: cover;
+}
+.content11{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.content11p{
+    display: list-item;         
+    list-style-type: disc;      
+    list-style-position: inside;
+    padding: 3px 10px;
+    background-color: white;
+    border-radius: 17px;
+    margin-bottom: 0.4rem;
+}
+.liststyle{
+    position: relative;
+    left: -10px;
+}
+.card{
+    background: transparent !important;
+    border: 0px !important;
+}
+.card-body{
+    padding: 1rem 0rem !important;
+}
+.content2{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.content2767{
+    display: none;
+}
+.content2g767{
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+@media all and (max-width:767px){
+    .content2div{
+        display: none;
+    }
+    .content2767{
+        display: inline-block;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .content2g767{
+        display: none;
+    }
+}
+.content21{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.slidecard{
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slidecard{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.button{
+    border-radius: 20px;
+    padding: 4px 10px;
+    border: 2px solid #388087;
+    background-color: #388087;
+    color: white;
+}
+.button:hover{
+    background:transparent;
+    color: #388087;
+}
+a{
+    font-size: 17px;
+}
+

@@ -1,7 +1,9 @@
+import Feed from "./Components/Feed/Feed";
+
 function App() {
   return (
     <div className="App">
-      Here we do routing!
+      <Feed/>
     </div>
   );
 }

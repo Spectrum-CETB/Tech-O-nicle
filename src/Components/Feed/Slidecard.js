@@ -3,7 +3,7 @@ import React from 'react'
 function Slidecard({image}) {
     return (
         <div className="row justify-content-center">
-            <div className="col-11">
+            <div className="col-sm-11 col-xs-12 col-md-11">
                 <div className="slidecard" style={{ backgroundImage: `url(${image})` }} >
                     <div className="slidecardcontent mb-2">
                         <span style={{display:'inline-block'}}><p className="content11p"><span className="liststyle">fullstack</span></p></span>

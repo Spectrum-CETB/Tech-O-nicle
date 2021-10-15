@@ -4,7 +4,7 @@ import fb from './images/fb.png'
 import './Style.css'
 
 
-function Specific_blog() {
+function SpecificBlog() {
     return (
         <>
          <div className="container-fluid sb">
@@ -98,4 +98,4 @@ Thanking You
     )
 }
 
-export default Specific_blog
+export default SpecificBlog;

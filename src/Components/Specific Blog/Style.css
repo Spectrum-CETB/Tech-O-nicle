@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+/* Specific Blog */
+.sb{
+    padding: 10px 25px;
+    background-color: #F6F6F2;
+}
+.spcfcblog{
+    margin-top: 5%;
+  }
+  .spimg{
+  width: 80%;
+  height: 500px;
+  
+  
+  }
+  .bimg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .domains{
+      display: flex;
+      flex-direction: row;
+      margin: 10px 0;
+  }
+  .pfsection{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .pimg{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: relative;
+    left: -10%;
+  }
+  .wname{
+      position: relative;
+      left: -8%;
+      font-family: 'Scheherazade New', serif;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+  }
+  .mediaicons{
+    display: flex;
+    justify-content: center;
+    margin: 5px auto;
+    position: relative;
+  left: -10%;
+  }
+  .mediaicons i{
+  margin: 0 15px 0 15px;
+  /* width: 100px !important;
+  height: 100px !important; */
+  font-size: 1.2rem;
+  
+  }
+  .follow{
+      background-color: #388087;
+      color: white;
+      border: none;
+      padding: 5px 15px;
+      font-size: 1.2rem;
+      width: 188px;
+      border-radius: 5px;
+      position: relative;
+      left: -8%;
+      margin: 10px 5px;
+  }
+  .quote{
+      padding: 15px 20px;
+  }
+  .quote h1{
+    font-family: 'Lobster';
+      color: grey;
+      font-size: 2.5rem;
+      width: 90%;
+  }
+  
+  .time{
+      background-color: rgba(139, 131, 131, 0.562);
+      border-radius: 5px;
+      color: black;
+      font-weight: 600;
+      
+      margin: 10px;
+      padding: 0 8px;
+      display: flex;
+flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 1px;
+  }
+.domain-name{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+
+}
+.circle1{
+    border-radius: 50%;
+    background-color: rgb(216, 22, 142);
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+
+}
+.circle2{
+border-radius: 50%;
+background-color: rgb(223, 209, 20);
+width: 15px;
+height: 15px;
+margin: 10px;
+
+}
+.circle3{
+    border-radius: 50%;
+    background-color: rgb(73, 15, 231);
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+    
+    }
+    .circle1,
+    .circle2,
+    .circle3{
+        position: relative;
+        top: -10%;
+    }
+.date h4{
+    font-size: 1.2rem;
+    margin: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+.domain-name h4,
+.time h4{
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+.content{
+    padding: 0 100px;
+}
+.content h2{
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+.content p{
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* font-family: 'PT Sans', sans-serif; */
+    font-family: 'PT Sans Narrow', sans-serif;
+    /* font-family: 'Playfair Display', serif; */
+
+}

@@ -113,7 +113,7 @@ function Feed() {
                     </div>
                 </div>
                 <Carousel 
-                    autoPlay={true}
+                    //autoPlay={true}
                     infinite={true}
                     centerMode={false}
                     arrows

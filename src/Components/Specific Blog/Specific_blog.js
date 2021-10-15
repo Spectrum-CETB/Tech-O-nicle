@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from './images/specificblog.png'
-import fb from './images/fb.png'
+//import fb from './images/fb.png'
 import './Style.css'
 
 

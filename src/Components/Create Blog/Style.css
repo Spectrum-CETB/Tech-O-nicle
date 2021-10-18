@@ -1,0 +1,12 @@
+.blog{
+    background-color: #f6f6f2;
+}
+
+h6, .tag{
+    position: relative !important;
+    right: -10% !important;
+}
+ .bumton{
+     color: #fff;
+     background-color: #388087;
+ }

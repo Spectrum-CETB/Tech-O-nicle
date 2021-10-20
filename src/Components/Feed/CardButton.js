@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function CardButton() {
-    return (
-        <a href="/#"><button className="button">Read more</button></a>
-    )
+export default class CardButton extends Component {
+    render() {
+        return (
+            <div>
+               <a href="/#"><button className="button">Read more</button></a> 
+            </div>
+        )
+    }
 }
 
-export default CardButton

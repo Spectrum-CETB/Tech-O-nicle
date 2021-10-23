@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path = "/dashboard">
+        <Route path = "/dashboard">
             <Feed/>
           </Route>
           <Route path = "/blog/:id">

@@ -55,7 +55,7 @@ function CreateBlog() {
                 
 
                 <div className="panel-body">
-                    <form className="form-horizontal" role="form" method="POST">
+                    <form className="form-horizontal" method="POST">
                         <div className="form-group">
                             <div className="col-md-12 my-3">
                                 <input type="text" className="form-control" name="title" placeholder="Title of your blog"/>

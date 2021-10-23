@@ -10,18 +10,20 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Route path = "/dashboard">
-          <Feed/>
-        </Route>
-        <Route path = "/blog/:id">
-          <SpecificBlog/>
-        </Route>
-        <Route path = "/create-blog">
-          <CreateBlog/>
-        </Route>
-        <Route path = "/login-signup">
-          <LoginSignup/>
-        </Route>
+        <Switch>
+          <Route path = "/dashboard">
+            <Feed/>
+          </Route>
+          <Route path = "/blog/:id">
+            <SpecificBlog/>
+          </Route>
+          <Route path = "/create-blog">
+            <CreateBlog/>
+          </Route>
+          <Route path = "/login-signup">
+            <LoginSignup/>
+          </Route>
+        </Switch>
       </Router>
     </div>
   );

@@ -1,4 +1,4 @@
-import React,{state, useState, check} from 'react'
+import React,{useState} from 'react'
 import './Style.css'
 
 

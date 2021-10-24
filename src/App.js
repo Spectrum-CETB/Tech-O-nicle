@@ -1,5 +1,5 @@
 // importing react router dom!
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import CreateBlog from "./Components/Create Blog/CreateBlog";
 import Feed from "./Components/Feed/Feed";
@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Switch>
         <Route path = "/dashboard">
             <Feed/>
           </Route>
@@ -23,7 +22,6 @@ function App() {
           <Route path = "/login-signup">
             <LoginSignup/>
           </Route>
-        </Switch>
       </Router>
     </div>
   );

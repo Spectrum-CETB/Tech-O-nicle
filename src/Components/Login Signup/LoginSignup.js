@@ -25,7 +25,7 @@ function LoginSignup() {
                     <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
                     <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
                 </div>
-                <span>or use your account</span>
+                <span className="spn">or use your account</span>
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
@@ -40,7 +40,7 @@ function LoginSignup() {
                     <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
                     <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
                 </div>
-                <span>or use your email for registration</span>
+                <span className="spn">or use your email for registration</span>
                 <input type="text" placeholder="Name" />
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />

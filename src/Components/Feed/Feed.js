@@ -36,12 +36,12 @@ export default class Feed extends Component {
         };
         return (
             <div style={{ backgroundColor: '#F6F6F2' }}>
-                <div style={{ backgroundColor: 'wheat' }} className="pb-2">
+                <div style={{ backgroundColor: 'wheat' }} className="pb-2 pt-2">
                     <div className="mb-0 pe-4" style={{ padding: '0px 15px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <div className="live mt-1 mb-0 ms-3">
+                        <div className="live mt-1 mb-0 ms-2">
                             <h3 className="m-0 mb-1">Trending Topics</h3>
                         </div>
-                        <a style={{ textDecoration: 'none', fontWeight: '500', fontSize: '1.2rem' }} className="m-0" href="/#">view all</a>
+                        <a style={{ textDecoration: 'none', fontWeight: '500', fontSize: '1.1rem' }} className="m-0 button11" href="/#">view all</a>
                     </div>
                     <Carousel
                         autoPlay={true}

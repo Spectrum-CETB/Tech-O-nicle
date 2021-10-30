@@ -9,7 +9,7 @@ function SpecificBlog() {
         <>
          <div className="container-fluid sb">
              <div className="row spcfcblog">
-                 <div className="col-lg-9 col-md-7 bimg">
+                 <div className="col-lg-9 col-md-8 bimg">
 <img className="img-fluid spimg " src={Img} alt="" />
 <div className="domains">
     <div className="time"><h4>4 min read</h4></div>
@@ -30,21 +30,21 @@ function SpecificBlog() {
     </div>
 </div>
                  </div>
-                 <div className="col-lg-3 col-md-5 pfsection">
+                 <div className="col-lg-3 col-md-4 pfsection">
 
-                 {/* <div className="pfimg"> */}
-                     <img className="img-fluid pimg" 
+                 
+                     <img className="img-fluid pimg mrg-left" 
                      src="https://i.guim.co.uk/img/media/fd9b9ed4d416bd1867fe356e49975b9527c26765/0_59_2588_1553/master/2588.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=9524bc6ee58b97a7230c38228afaecec" alt="" />
-                 {/* </div> */}
-                 <h2 className="wname">Sundar Pichai</h2>
-                 <div className="mediaicons">
+                
+                 <h2 className="wname mrg-left">Sundar Pichai</h2>
+                 <div className="mediaicons ">
                  <i className="fab fa fa-facebook-f hh"></i>
                  <i className="fab fa-linkedin-in hh"></i>
                  <i className="fab fa-instagram hh"></i>
                  <i className="fab fa-twitter hh"></i>
 
                  </div>
-                 <button className="follow">Follow</button>
+                 <button className="follow mrg-left">Follow</button>
                  <div className="quote">
                      <h1>"I have the power to develop a better you.."</h1>
                  </div>

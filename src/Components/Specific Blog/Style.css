@@ -17,6 +17,7 @@
   
   
   }
+  
   .bimg{
     display: flex;
     flex-direction: column;
@@ -26,6 +27,7 @@
   .domains{
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       margin: 10px 0;
   }
   .pfsection{
@@ -85,6 +87,7 @@
       font-size: 2.5rem;
       width: 90%;
   }
+  
   
   .time{
       background-color: rgba(139, 131, 131, 0.562);
@@ -167,4 +170,70 @@ margin: 10px;
     font-family: 'PT Sans Narrow', sans-serif;
     /* font-family: 'Playfair Display', serif; */
 
+}
+
+@media screen and (max-width: 1084px) {
+    .spimg{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .quote h1{
+        font-size: 2rem;;
+    }
+    .spimg{
+      width: 100%;
+      height: 350px;
+      
+      
+      }
+      .content{
+        padding: 0 80px;
+    }
+    .content h2{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 800px){
+    .content{
+        padding: 0 50px;
+    }
+    
+}
+@media screen and (max-width: 560px){
+    .hh{
+        position: relative;
+        /* right: -80%; */
+        right: -20%;
+    }
+    .mediaicons{
+        position: relative;
+        right: -10px;
+        /* margin-left: -10px; */
+    }
+    .pimg,
+    .wname,
+    .follow{
+        margin-left: 80px;
+    }
+    .pfsection{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .wname{
+        position: relative;
+        right: -80% !important;
+    }
+    .content{
+        padding: 0 10px;
+    }
+    .content h2{
+        font-size: 2.2rem;
+    }
+    .content p{
+        font-size: 1.2rem;
+    }
 }

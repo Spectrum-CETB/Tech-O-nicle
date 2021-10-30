@@ -4,7 +4,7 @@ export default class CardButton extends Component {
     render() {
         return (
             <div>
-               <a href="/#"><button className="button">Read more</button></a> 
+               <a href="/#"><button className="button">Read Article</button></a> 
             </div>
         )
     }

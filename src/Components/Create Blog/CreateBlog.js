@@ -32,38 +32,51 @@ function CreateBlog() {
   var displayTags=Object.keys(state.tags).filter(tag => state.tags[tag]);
   
   return (
+    <div className="bg">
     <div className="container-fluid sb">
-      <div className="panel-heading"><h4 align="center">Lorem Ipsum</h4></div>
+      <div className="panel-heading hd"><h3 align="center"> 🖊 CREATE YOUR BLOG! 🖊</h3></div>
       <div className="row">
       <div className="col-lg-3 col-md-4 col-sm-3 attch">
-        <h6>Attach tags: </h6>
+        <h5 className="att">ATTACH TAGS: </h5>
         <div className="tag">
-        <input type="checkbox" name="Blockchain "  onChange={check}/>Blockchain&nbsp;<br/>
         <input type="checkbox" name="AI " onChange={check}/>AI&nbsp;<br/>
-        <input type="checkbox" name="Fullstack " onChange={check}/>Fullstack&nbsp;<br/>
-        <input type="checkbox" name="Php " onChange={check}/>PHP&nbsp;<br/>
-        <input type="checkbox" name="Kotlin " onChange={check}/>Kotlin&nbsp; <br/>
-        <input type="checkbox" name="ROS "  onChange={check}/>ROS&nbsp;<br/>
-        <input type="checkbox" name="ML " onChange={check}/>ML&nbsp;<br/>
-        <input type="checkbox" name="MERN  "  onChange={check}/>MERN&nbsp;<br/>
+        <input type="checkbox" name="Blockchain " onChange={check}/>Blockchain&nbsp;<br/>
+        <input type="checkbox" name="Data Science " onChange={check}/>Data Science&nbsp;<br/>
         <input type="checkbox" name="Flutter " onChange={check}/>Flutter&nbsp;<br/>
+        <input type="checkbox" name="Fullstack " onChange={check}/>Fullstack&nbsp;<br/>
+        <input type="checkbox" name="iOS " onChange={check}/>iOS&nbsp;<br/>
+        <input type="checkbox" name="IoT " onChange={check}/>IoT&nbsp;<br/>
+        <input type="checkbox" name="Javascript " onChange={check}/>Javascript&nbsp;<br/>
+        <input type="checkbox" name="Kotlin " onChange={check}/>Kotlin&nbsp; <br/>
+        <input type="checkbox" name="MERN  "  onChange={check}/>MERN&nbsp;<br/>
+        <input type="checkbox" name="ML " onChange={check}/>ML&nbsp;<br/>
+        <input type="checkbox" name="PHP " onChange={check}/>PHP&nbsp;<br/>
+        <input type="checkbox" name="Reactjs " onChange={check}/>Reactjs&nbsp;<br/>
+        <input type="checkbox" name="ROS "  onChange={check}/>ROS&nbsp;<br/>
+        <input type="checkbox" name="SQL " onChange={check}/>SQL&nbsp;<br/>
+        <br/>
+        
+        <div style={{backgroundColor:"#388087", color:"white"}}>
       {displayTags}
+      </div>
         </div>
       </div>
+      
         <div className="col-lg-9 col-md-8 col-sm-9">
+          <div className="right">
             <div className="panel panel-default">
                 
 
                 <div className="panel-body">
                     <form className="form-horizontal" method="POST">
                         <div className="form-group">
-                            <div className="col-md-12 my-3">
+                            <div className="col-md-12 my-4">
                                 <input type="text" className="form-control" name="title" placeholder="Title of your blog"/>
                             </div>
                         </div>
                         <div className="form-group">
                             <div className="col-md-12 my-3">
-                                <textarea name="content" className="form-control" cols="30" rows="10" placeholder="Content of your blog"></textarea>
+                                <textarea name="content" className="form-control" cols="30" rows="21" placeholder="Content of your blog"></textarea>
                             </div>
                         </div>
                         <button type="submit" className="btn btn-bumton btn-block bumton">
@@ -73,8 +86,9 @@ function CreateBlog() {
                 </div>
             </div>
         </div>
-        
+        </div>
       </div>
+    </div>
     </div>
   )
 }

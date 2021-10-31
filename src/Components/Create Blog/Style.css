@@ -1,12 +1,43 @@
-.blog{
+.bg{
     background-color: #f6f6f2;
 }
-
+h3{
+    padding: 13px;
+    color: #388087;
+    font-weight: bold;
+}
 h6, .tag{
     position: relative !important;
-    right: -10% !important;
+    right: -6% !important;
+    color: #388087;
+    font-weight: 600;
+    font-size: large;
+    padding-top: 15px;
 }
  .bumton{
      color: #fff;
      background-color: #388087;
  }
+.att{
+    margin-top: 25px;
+    font-weight: bold;
+    margin-left: 30px;
+    color: #388087;
+}
+.right{
+    padding-right: 70px;
+}
+
+input[type=text]{
+    border: 3px solid #388087;
+}
+input[type=text]:focus {
+    border: 3px solid #377379;
+  }
+textarea[name=content]{
+    border: 3px solid #388087;
+}
+textarea[name=content]:focus{
+    border: 3px solid #377379;
+}
+

@@ -5,6 +5,7 @@ import CreateBlog from "./Components/Create Blog/CreateBlog";
 import Feed from "./Components/Feed/Feed";
 import SpecificBlog from "./Components/Specific Blog/Specific_blog";
 import LoginSignup from "./Components/Login Signup/LoginSignup"
+import Profile from "./Components/Profile/Profile"
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path = "/login-signup">
             <LoginSignup/>
+          </Route>
+          <Route path = "/profile">
+            <Profile/>
           </Route>
       </Router>
     </div>

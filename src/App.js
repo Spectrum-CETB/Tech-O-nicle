@@ -1,6 +1,7 @@
 // importing react router dom!
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+import Homepage from "./Components/Homepage/Homepage";
 import CreateBlog from "./Components/Create Blog/CreateBlog";
 import Feed from "./Components/Feed/Feed";
 import SpecificBlog from "./Components/Specific Blog/Specific_blog";
@@ -30,6 +31,9 @@ function App() {
         <Route path="/profile">
           <Navbar />
           <Profile />
+        </Route>
+        <Route path="/home-page">
+          <Homepage />
         </Route>
       </Router>
     </div>

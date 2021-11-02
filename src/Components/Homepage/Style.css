@@ -1,0 +1,72 @@
+body{
+    background:#E5E5E5;
+}
+/*Navbar Part*/
+.navbar{
+    background:#E5E5E5 ;
+}
+
+.navbar-brand{
+    color: #000;
+}
+
+.nav-link{
+    color: #000;
+}
+
+
+/*Banner Part*/
+
+.banner-text {
+    color: #000;
+    text-align: left;   
+}
+
+.banner-text h1{
+    font-size: 55px;
+    margin-top: 20px;
+}    
+
+.banner-text h4{
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+} 
+
+.xplr{
+    padding: 11px;
+    background: #388087 ;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 40px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.xplr:hover{
+    background: #93c2c7 ;
+}
+
+/*Trending Blogs Part*/
+
+.b_title{
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.trend-blog{
+    background-color: #f2f2f2 ;
+    margin-bottom: 20px;
+}
+
+/*Split Screen Scroll Effect*/
+
+.split{
+    height: 200vh;
+    display: flex; 
+
+}

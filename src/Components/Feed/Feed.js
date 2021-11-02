@@ -258,7 +258,7 @@ export default class Feed extends Component {
                     </div>
                     <div className="container-fluid mb-4">
                         <div className="row justify-content-center align-items-center">
-                            <div className="col-lg-8 col-md-10">
+                            <div className="col-lg-8 col-md-10 p-0">
                                 <Article profilepic={image1} articlepic={image} />
                                 <Article profilepic={image3} articlepic={image2} />
                                 <Article profilepic={image4} articlepic={image1} />

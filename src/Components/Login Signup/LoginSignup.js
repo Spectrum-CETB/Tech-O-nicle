@@ -3,6 +3,7 @@ import './Style.css'
 
 
 
+
 function LoginSignup() {
     const [rightPanel, setRightPanel] = useState(false);
     function handleSignin(){

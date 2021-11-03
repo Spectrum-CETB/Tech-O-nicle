@@ -7,16 +7,31 @@ body{
     background:#E5E5E5;
 }
 /*Navbar Part*/
-.navbar{
+.tnavbar{
     background:#E5E5E5 ;
 }
 
 .navbar-brand{
     color: #000;
+    font-size: 30px;
+    text-decoration: none;
+
 }
 
-.nav-link{
-    color: #000;
+.tnav-item{
+    margin: 10px;
+}
+.tnav-btn{
+    text-decoration: none;
+    margin: 10px;
+    color: black;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.tnav-btn:hover{
+    background-color:#388087 ;
+    color: white;
 }
 
 
@@ -79,7 +94,91 @@ body{
 /*Split Screen Scroll Effect*/
 
 .split{
-    height: 200vh;
-    display: flex; 
-   
+    height: 50vh;
+    display: flex;
+    margin: 20px; 
+    
+}
+
+/*Scroll Part*/
+.scroll_title{
+    padding:10px 70px;
+    text-align:justify;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+.interestblogs{
+    width: 50%;
+    scroll-snap-type: y;
+    overflow-y: scroll;
+    
+}
+
+.interest-blog{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    
+    scroll-snap-align: start;
+}
+
+.last_img{
+    padding: 10px;
+}
+
+/*Fixed Part*/
+.fixedtag{
+    width: 50%;
+    height: 50vh;
+    padding:0 30px;
+}
+
+.tags{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.newtag{
+    margin:5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    background-color: #f2f2f2;
+}
+
+.newtag:hover{
+    color:#fff ;
+    background-color: #93c2c7;
+}
+
+.fix-title{
+    padding:0 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 640px){
+    .split{
+        display: block;
+    }
+
+    .fixedtag{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .interestblogs{
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .last_img{
+        display: none;
+    }
 }

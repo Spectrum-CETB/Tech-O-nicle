@@ -143,11 +143,11 @@ div.content1{
 }
 .button1{
     border-radius: 10px;
-    padding: 4px 6px;
+    padding: 1px 6px !important;
     border: 2px solid #388087;
     background:transparent;
     color: #388087;
-
+    font-size: 14px;
 }
 .button1:hover{
     background-color: #388087;
@@ -155,7 +155,7 @@ div.content1{
 }
 .button11{
     border-radius: 10px;
-    padding: 3px 5px;
+    padding: 1px 5px !important;
     border: 2px solid #388087;
     background:transparent;
     color: #388087;

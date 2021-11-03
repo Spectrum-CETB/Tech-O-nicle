@@ -69,7 +69,7 @@ export default class Feed extends Component {
                 <div className="container-fluid mt-4">
                     <div className="row justify-content-center align-items-center">
                         <div className="col-lg-3 col-md-5 col-sm-6">
-                            <div className="card mb-1">
+                            <div className="card mb-1" style={{ backgroundColor: '#F6F6F2' }}>
                                 <img className="card-img-top" style={{ borderRadius: "7px", height: '14rem' }} src={image} alt="card-img" />
                                 <div className="card-body">
                                     <div className="mb-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
@@ -94,7 +94,7 @@ export default class Feed extends Component {
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-5 col-sm-6">
-                            <div className="card mb-1">
+                            <div className="card mb-1" style={{ backgroundColor: '#F6F6F2' }}>
                                 <img className="card-img-top" style={{ borderRadius: "7px", height: '14rem' }} src={image4} alt="card-img" />
                                 <div className="card-body">
                                     <div className="mb-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>

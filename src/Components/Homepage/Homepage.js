@@ -43,7 +43,7 @@ export class Homepage extends Component {
         </div>
 
      <section>
-     <p className="b_title">#Trending Today</p>
+     <p className="b_title p">#Trending Today</p>
       <div className="horizontal row px-5 pt-5 pb-2">
         
         <div className="col-md-4">
@@ -53,8 +53,8 @@ export class Homepage extends Component {
                   <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit error provident voluptatibus obcaecati ullam alias.</h5>
                   <div className="mt-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}>
                       <div className="blog me-2"></div>
-                      <p className="p-0 m-0" style={{ fontWeight: '500'}}>Oct 30</p>
-                      <p className="p-0 m-0 ms-2" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
+                      <p className="p-0 m-0 p" style={{ fontWeight: '500'}}>Oct 30</p>
+                      <p className="p-0 m-0 ms-2 p" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
                   </div>
               </div>
               
@@ -69,8 +69,8 @@ export class Homepage extends Component {
                   <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit error provident voluptatibus obcaecati ullam alias.</h5>
                   <div className="mt-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}>
                       <div className="blog me-2"></div>
-                      <p className="p-0 m-0" style={{ fontWeight: '500'}}>Oct 30</p>
-                      <p className="p-0 m-0 ms-2" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
+                      <p className="p-0 m-0 p" style={{ fontWeight: '500'}}>Oct 30</p>
+                      <p className="p-0 m-0 ms-2 p" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
                   </div>
               </div>
               
@@ -85,8 +85,8 @@ export class Homepage extends Component {
                   <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit error provident voluptatibus obcaecati ullam alias.</h5>
                   <div className="mt-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}>
                       <div className="blog me-2"></div>
-                      <p className="p-0 m-0" style={{ fontWeight: '500'}}>Oct 30</p>
-                      <p className="p-0 m-0 ms-2" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
+                      <p className="p-0 m-0 p" style={{ fontWeight: '500'}}>Oct 30</p>
+                      <p className="p-0 m-0 ms-2 p" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
                   </div>
               </div>
               
@@ -105,8 +105,8 @@ export class Homepage extends Component {
                   <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit error provident voluptatibus obcaecati ullam alias.</h5>
                   <div className="mt-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}>
                       <div className="blog me-2"></div>
-                      <p className="p-0 m-0" style={{ fontWeight: '500'}}>Oct 30</p>
-                      <p className="p-0 m-0 ms-2" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
+                      <p className="p-0 m-0 p" style={{ fontWeight: '500'}}>Oct 30</p>
+                      <p className="p-0 m-0 ms-2 p" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
                   </div>
               </div>
               </div>
@@ -120,8 +120,8 @@ export class Homepage extends Component {
                   <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit error provident voluptatibus obcaecati ullam alias.</h5>
                   <div className="mt-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}>
                       <div className="blog me-2"></div>
-                      <p className="p-0 m-0" style={{ fontWeight: '500'}}>Oct 30</p>
-                      <p className="p-0 m-0 ms-2" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
+                      <p className="p-0 m-0 p" style={{ fontWeight: '500'}}>Oct 30</p>
+                      <p className="p-0 m-0 ms-2 p" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
                   </div>
               </div>
               </div>
@@ -135,8 +135,8 @@ export class Homepage extends Component {
                   <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit error provident voluptatibus obcaecati ullam alias.</h5>
                   <div className="mt-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}>
                       <div className="blog me-2"></div>
-                      <p className="p-0 m-0" style={{ fontWeight: '500'}}>Oct 30</p>
-                      <p className="p-0 m-0 ms-2" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
+                      <p className="p-0 m-0 p" style={{ fontWeight: '500'}}>Oct 30</p>
+                      <p className="p-0 m-0 ms-2 p" style={{display: 'list-item', listStyleType: 'disc', listStylePosition: 'inside'}}><span class="list">4 min read</span></p>
                   </div>
               </div>
               </div>

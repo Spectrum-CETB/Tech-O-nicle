@@ -177,7 +177,7 @@ export default class Feed extends Component {
                                     <h3>Popular Articles</h3>
                                     <a style={{ textDecoration: 'none', fontWeight: '500', fontSize: '1.2rem' }} className="m-0 button1" href="/#">view all</a>
                                 </div>
-                                <div className="content21 mb-3 p-1" style={{ background: 'white', borderRadius: '10px' }}>
+                                <div className="content21 mb-3 p-1" style={{background: 'white', borderRadius: '10px' }}>
                                     <h5 className="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h5>
                                     <p className="mb-0 mt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit veritatis necessitatibus.</p>
                                     <div className="mt-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>

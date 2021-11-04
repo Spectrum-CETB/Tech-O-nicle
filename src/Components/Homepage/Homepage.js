@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import banner from './banner-image.png'
 import page_end from './page-end.png'
 import './Style.css';
-
+import { Link } from 'react-router-dom';
 
 export class Homepage extends Component {
     render() {
@@ -24,7 +24,7 @@ export class Homepage extends Component {
                     <a class="tnav-btn p-2" type="button">Contacts</a>
                   </li>
                   <li className="tnav-item">
-                    <a class="tnav-btn p-2" type="button">Get Started</a>
+                    <Link class="tnav-btn p-2" to = "/login-signup" type="button">Get Started</Link>
                   </li>
                 </ul>
               </div>
@@ -36,7 +36,7 @@ export class Homepage extends Component {
                   <div className="banner-text">
                     <h1>Techonicle - A Place to read,write,learn and explore tech </h1><br />
                     <h4>On any tech domains you can think about!</h4><br />
-                    <a href="#about"><button className="xplr">Start Writing</button></a>
+                    <Link to = '/dashboard'><button className="xplr">Start Writing</button></Link>
                   </div>
                   <img className="img-fluid d-sm-block" src={banner} alt="banner"></img>
                 </div>

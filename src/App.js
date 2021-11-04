@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       <Router>
         <Route exact path="/">
+          <Navbar />
           <Homepage />
         </Route>
         <Route path="/dashboard">

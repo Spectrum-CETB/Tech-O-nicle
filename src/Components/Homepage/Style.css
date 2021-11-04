@@ -41,12 +41,13 @@ body{
 }
 .banner-text {
     color: #000;
-    text-align: left;   
+    text-align: left;
+    margin: 20px 40px ;   
 }
 
 .banner-text h1{
     font-size: 55px;
-    margin-top: 20px;
+    margin:20px 20px;
 }    
 
 .banner-text h4{
@@ -73,6 +74,9 @@ body{
 }
 
 /*Trending Blogs Part*/
+.trending{
+    margin: 100px 0;
+}
 
 .p{
     padding: 15px;
@@ -91,94 +95,73 @@ body{
     justify-content:space-evenly;
 }
 
-/*Split Screen Scroll Effect*/
+/*About Us*/
 
-.split{
-    height: 50vh;
-    display: flex;
-    margin: 20px; 
-    
+.about_sec{
+    margin-top: 40px;
 }
 
-/*Scroll Part*/
-.scroll_title{
-    padding:10px 70px;
-    text-align:justify;
-    font-size: 30px;
-    font-weight: 500;
+.abt{
+    margin:100px 20px;
+}
+.abt-text{
+    font-size: 15px;
+    text-align: justify;
+    margin: 0 20px;
 }
 
-
-.interestblogs{
-    width: 50%;
-    scroll-snap-type: y;
-    overflow-y: scroll;
-    
-}
-
-.interest-blog{
-    display: flex;
-    flex-direction: column;  
+.contact{
     align-items: center;
-    
-    scroll-snap-align: start;
-}
-
-.last_img{
-    padding: 10px;
-}
-
-/*Fixed Part*/
-.fixedtag{
-    width: 50%;
-    height: 50vh;
+    justify-content: center;
     padding:0 30px;
+    margin:30px 100px;
 }
 
-.tags{
+
+.send{
+    margin: 30px;
+}
+.sendbtn{
     padding: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.newtag{
-    margin:5px 10px;
-    border-radius: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: #388087;
     text-decoration: none;
-    font-weight: 600;
-    color: black;
-    background-color: #f2f2f2;
+    margin: 50px;
 }
 
-.newtag:hover{
-    color:#fff ;
-    background-color: #93c2c7;
+.sendbtn:hover{
+    background: #93c2c7 ;
+    color: white;
 }
 
-.fix-title{
-    padding:0 20px;
-    text-align: center;
-}
+
 
 @media only screen and (max-width: 640px){
-    .split{
-        display: block;
+    .banner-text{
+        text-align: justify;
+        align-items: center;
+        justify-content: center;
+        margin: 0 20px;
     }
-
-    .fixedtag{
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .interestblogs{
-        width: 100%;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
     .last_img{
-        display: none;
+        padding: 30px;
     }
+
+    .banner-text h1{
+        font-size: 33px;
+        margin:0 10px;
+    }
+
+    .abt-text{
+        margin: 20px;
+        margin-left: -1px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact{
+        margin:30px 20px ;
+    }
+
 }

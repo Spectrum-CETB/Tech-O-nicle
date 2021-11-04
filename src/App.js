@@ -13,6 +13,9 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Route path="/">
+          <Homepage />
+        </Route>
         <Route path="/dashboard">
           <Navbar />
           <Feed />
@@ -31,9 +34,6 @@ function App() {
         <Route path="/profile">
           <Navbar />
           <Profile />
-        </Route>
-        <Route path="/home-page">
-          <Homepage />
         </Route>
       </Router>
     </div>

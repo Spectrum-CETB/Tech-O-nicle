@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 import './Style.css'
-
-
-
+import axios from 'axios';
 
 function LoginSignup() {
     const [rightPanel, setRightPanel] = useState(false);
@@ -13,7 +11,35 @@ function LoginSignup() {
         setRightPanel(false);
     }
 
-        
+    const [state,setState] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        password: '',
+        registered: false
+    })
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const user = {
+            name: state.name,
+            email: state.email,
+            phone: state.phone,
+            password: state.password
+        }
+
+        axios.post('https://spectrumcet.com/techonicle/register.php',user)
+        .then((res) => {
+            if(res.data.status) {
+                setState({...state,registered:true});
+            } 
+
+            console.log(state.registered)
+        })
+        .catch(err => console.log(err));
+    }
+
     return (
         <div className="container__1 ">
         <div className={rightPanel ? "container container_3 right-panel-active" : "container container_3"} id="container_3">
@@ -34,17 +60,18 @@ function LoginSignup() {
             </form>
         </div>
         <div className="form-container sign-in-container">
-            <form action="#">
+            <form onSubmit = { handleSubmit }>
                 <h1 className="heading">Create Account</h1>
-                <div className="social-container">
+                {/*<div className="social-container">
                     <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
                     <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
                     <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
                 </div>
-                <span className="spn">or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <span className="spn">or use your email for registration</span>*/}
+                <input type="text" placeholder="Name" onChange = { (e) => setState({...state,name: e.target.value}) } value = { state.name }/>
+                <input type="email" onChange = { (e) => setState({...state,email: e.target.value}) } placeholder="Email" value = { state.email }/>
+                <input type="text" placeholder="Phone" onChange = { (e) => setState({...state,phone: e.target.value}) } value = { state.phone }/>
+                <input type="password" onChange = { (e) => setState({...state,password: e.target.value}) } placeholder="Password" value = { state.password }/>
                 <button>Sign Up</button>
             </form>
         </div>

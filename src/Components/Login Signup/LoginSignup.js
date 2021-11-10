@@ -16,6 +16,7 @@ function LoginSignup() {
         email: '',
         phone: '',
         password: '',
+        message: '',
         registered: false
     })
 
@@ -33,17 +34,28 @@ function LoginSignup() {
         .then((res) => {
             if(res.data.status) {
                 setState({...state,registered:true});
-            } 
+            }
+
+            // setState({...state,message:res.data.response});
 
             console.log(state.registered)
         })
         .catch(err => console.log(err));
     }
 
+    // const message = () => {
+    //     if(state.message) {
+    //         return(
+    //             )
+    //     } else {
+    //         return(
+    //             <div></div>)
+    //     }
+    // }
+
     return (
         <div className="container__1 ">
         <div className={rightPanel ? "container container_3 right-panel-active" : "container container_3"} id="container_3">
-       
         <div className="form-container sign-up-container">
             <form action="#">
                 <h1 className="heading">Sign in</h1>

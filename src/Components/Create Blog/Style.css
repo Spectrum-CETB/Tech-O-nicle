@@ -41,3 +41,16 @@ textarea[name=content]:focus{
     border: 3px solid #377379;
 }
 
+.displayTags{
+    line-height: 40px;
+}
+
+.badges{
+    display: inline-block;
+    padding: 0px 10px !important; 
+    background-color: #388087;
+    color: white;
+    border-radius: 60px;
+    margin: 5px !important;
+}
+

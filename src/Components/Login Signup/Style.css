@@ -22,6 +22,10 @@
     margin: 20px 0 30px;
 }
 
+.hidden{
+    display: none !important;
+}
+
 .spn {
     font-size: 12px;
 }

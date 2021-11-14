@@ -19,7 +19,7 @@ export class Profile extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-4 text-center">
-                            <img src={profile} alt="profile Image" className="profile" />
+                            <img src={profile} alt="profile" className="profile" />
                         </div>
                         <div className="col-md-8 pt-md-3 pe-4 profile-text text-center text-md-start">
                             <h4>Shreyas Arya</h4>
@@ -50,7 +50,7 @@ export class Profile extends Component {
                             <div className="card px-md-3 mt-4">
                                 <div className="row align-items-center">
                                     <div className="col-4 col-md-4 col-lg-2">
-                                        <img src={blog} alt="blog image" className="img-fluid"/>
+                                        <img src={blog} alt="blog" className="img-fluid"/>
                                     </div>
                                     <div className="col cards">
                                         <div className="card-body">
@@ -66,7 +66,7 @@ export class Profile extends Component {
                             <div className="card px-md-3 mt-4">
                                 <div className="row align-items-center">
                                     <div className="col-4 col-md-4 col-lg-2">
-                                        <img src={blog} alt="blog image" className="img-fluid"/>
+                                        <img src={blog} alt="blog" className="img-fluid"/>
                                     </div>
                                     <div className="col cards">
                                         <div className="card-body">

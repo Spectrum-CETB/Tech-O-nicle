@@ -8,6 +8,7 @@ import SpecificBlog from "./Components/Specific Blog/Specific_blog";
 import LoginSignup from "./Components/Login Signup/LoginSignup"
 import Profile from "./Components/Profile/Profile"
 import Navbar from "./Components/Navbar/Navbar";
+import logout from "./Components/Logout/logout";
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
         <Route path="/profile">
           <Navbar />
           <Profile />
+        </Route>
+        <Route path="/logout">
+          <logout/>
         </Route>
       </Router>
     </div>

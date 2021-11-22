@@ -91,6 +91,8 @@ function LoginSignup() {
                     alertme.classList.remove('alert-danger');
                     alertme.classList.add('alert-success');
                     checkSvg.attributes[0].value = "#check-circle-fill";
+                    sessionStorage.addItem("user",res.data.user);
+                    console.log(sessionStorage.getItem("user"));
                 }
                 setLogin({ ...login, message: res.data.response });
                 resp.innerHTML = res.data.response;

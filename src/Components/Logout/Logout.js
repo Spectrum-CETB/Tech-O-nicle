@@ -1,9 +1,9 @@
 import { Redirect } from 'react-router-dom';
 
-function logout() {
+function LogoutComponent() {
 	sessionStorage.removeItem("user");
 
 	return(<Redirect to = {'/'}/>)
 }	
 
-export default logout;
+export default LogoutComponent;

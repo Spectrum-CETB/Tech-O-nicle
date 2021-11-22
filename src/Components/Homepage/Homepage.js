@@ -3,11 +3,22 @@ import banner from './banner-image.png'
 import sitting from './sitting1.png'
 import page_end from './page-end.png'
 import './Style.css';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 export class Homepage extends Component {
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        loggedInUser: sessionStorage.getItem("user")
+      }
+    }
+
     render() {
-        return (
+        if(this.state.loggedInUser) {
+          <Redirect to = {'/dashboard'}/>
+        } else {
+          return (
     
             
           <><div className="banner text-center mt-5">
@@ -233,6 +244,8 @@ export class Homepage extends Component {
        
         )
         }
-        }
+        
+    }
+}
 
 export default Homepage

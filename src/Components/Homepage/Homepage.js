@@ -16,7 +16,9 @@ export class Homepage extends Component {
 
     render() {
         if(this.state.loggedInUser) {
-          <Redirect to = {'/dashboard'}/>
+         return(
+             <Redirect to = {'/dashboard'}/>
+          )
         } else {
           return (
     

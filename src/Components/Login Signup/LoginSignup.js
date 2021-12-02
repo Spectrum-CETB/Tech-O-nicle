@@ -42,13 +42,17 @@ function LoginSignup() {
         const checkSvg = document.getElementById('check-svg');
         const resp = document.getElementById('login-msg');
 
-        axios.post('https://spectrumcet.com/techonicle/register.php', user)
+        axios({
+            method: "data",
+            url: 'https://spectrumcet.com/techonicle/register.php',
+            data: user
+        })
             .then((res) => {
                 if (res.data.status) {
                     setState({ ...state, registered: true });
                 }
 
-                if (res.data.status == false) {
+                if (res.data.status === false) {
                     alertme.classList.add('alert-danger');
                     alertme.classList.remove('alert-success');
                     checkSvg.attributes[0].value = "#exclamation-triangle-fill";
@@ -73,18 +77,22 @@ function LoginSignup() {
             email: login.email,
             password: login.password
         }
-
+        
         const alertme = document.getElementById('alert');
         const checkSvg = document.getElementById('check-svg');
         const resp = document.getElementById('login-msg');
 
-        axios.post('https://spectrumcet.com/techonicle/login.php', logUser)
+        axios({
+            method: "data",
+            url: 'https://spectrumcet.com/techonicle/login.php',
+            data: logUser
+        })
             .then((res) => {
                 if (res.data.status) {
                     setLogin({ ...login, loggedIn: true });
                 }
 
-                if (res.data.status == false) {
+                if (res.data.status === false) {
                     alertme.classList.add('alert-danger');
                     alertme.classList.remove('alert-success');
                     checkSvg.attributes[0].value = "#exclamation-triangle-fill";
@@ -111,21 +119,12 @@ function LoginSignup() {
             document.getElementById('alert').classList.add('hidden');
         })
     }
-    // const message = () => {
-    //     if(state.message) {
-    //         return(
-    //             )
-    //     } else {
-    //         return(
-    //             <div></div>)
-    //     }
-    // }
 
-    if(sessionStorage.getItem("user")) {
-        return(
-            <Redirect to = {'/dashboard'}/>
-        )
-    } else {
+     if(sessionStorage.getItem("user")) {
+         return(
+             <Redirect to = {'/dashboard'}/>
+         )
+     } else {
         return (<>
             <svg xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
                 <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -143,11 +142,11 @@ function LoginSignup() {
                 <div className="alert alert-success d-flex align-items-center hidden" role="alert" id={'alert'}>
                     <svg className="bi flex-shrink-0 me-2" width="24" height="24" role="img"><use xlinkHref="#check-circle-fill" id={'check-svg'} /></svg>
                     <div id={'login-msg'}></div>
-                    <button type="button" className="btn-close ms-4"></button>
+                    <button type="button" className="btn-close ms-4 mt-3"></button>
                 </div>
                 <div className={rightPanel ? "container container_3 right-panel-active" : "container container_3"} id="container_3">
                     <div className="form-container sign-up-container">
-                        <form onSubmit={loggingin}>
+                        <form onSubmit={loggingin} id="loginForm" >
                             <h1 className="heading">Sign in</h1>
                             {/* <div className="social-container">
                                 <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
@@ -157,8 +156,8 @@ function LoginSignup() {
                             <span className="spn">or use your account</span> */}
                             <input type="email" placeholder="Email" onChange={(e) => setLogin({ ...login, email: e.target.value })} value={login.email} />
                             <input type="password" placeholder="Password" onChange={(e) => setLogin({ ...login, password: e.target.value })} value={login.password} />
-                            <a href="#" className="social">Forgot your password?</a>
-                            <button>Sign In</button>
+                            <p className="social">Forgot your password?</p>
+                            <button className="mt-3">Sign In</button>
                         </form>
                     </div>
                     <div className="form-container sign-in-container">
@@ -184,14 +183,14 @@ function LoginSignup() {
                                 <h1>Welcome!</h1>
                                 <p className="para">Enter your personal details and start your journey on TECHONICLE with us</p>
                                 <p className="para">Already have an account?</p>
-                                <button className="ghost signIn" id="signIn" onClick={handleSignin}>Sign In</button>
+                                <button className="ghost signIn mt-3" id="signIn" onClick={handleSignin}>Sign In</button>
                             </div>
 
                             <div className="overlay-panel overlay-left">
                                 <h1>Welcome Back!</h1>
                                 <p className="para">To explore the world of TECHONICLE with us please login with your personal info</p>
                                 <p className="para">Not a member yet?</p>
-                                <button className="ghost signUp" id="signUp" onClick={handleSignup}>Sign Up</button>
+                                <button className="ghost signUp mt-3" id="signUp" onClick={handleSignup}>Sign Up</button>
                             </div>
 
 

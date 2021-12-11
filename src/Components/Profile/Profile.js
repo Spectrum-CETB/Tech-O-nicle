@@ -42,6 +42,22 @@ export class Profile extends Component {
         })
         .catch(console.error());
 
+        axios.get('https://spectrumcet.com/techonicle/get-user-blogs.php?email=' + this.state.user)
+        .then((res) => {
+            if(res.data.status) {
+                this.setState({
+                    blogs: res.data.blogs,
+                    message: res.data.response
+                })
+
+                console.log(this.state.blogs)
+            } else {
+                this.setState({
+                    message: res.data.response
+                })
+            }
+        })
+        .catch(console.error());
     }
 
     render() {
@@ -79,39 +95,26 @@ export class Profile extends Component {
                         </div>
                         <div className="col-md-8 my-blogs my-3">
                             <h5>MY BLOGS</h5>
-
-                            {/* blog1 */}
-                            <div className="card px-md-3 mt-4">
-                                <div className="row align-items-center">
-                                    <div className="col-4 col-md-4 col-lg-2">
-                                        <img src={blog} alt="blog" className="img-fluid"/>
-                                    </div>
-                                    <div className="col cards">
-                                        <div className="card-body">
-                                            <h5 className="card-title">My first Blog</h5>
-                                            <p className="card-text mt-2">This is just lorem ipsum dummy text. I forgot how to use lorem ipsum, so i am typing this much. This is so repetitive. But i have to fill this space, what to do. Help me!!!</p>
-                                            <p className="card-text"><small className="text-muted">3 min read</small></p>
+                            {
+                                this.state.blogs.map((blog) => {
+                                    return(
+                                        <div className="card px-md-3 mt-4">
+                                            <div className="row align-items-center">
+                                                <div className="col-4 col-md-4 col-lg-2">
+                                                    <img src={blog.bImage} alt="blog" className="img-fluid"/>
+                                                </div>
+                                                <div className="col cards">
+                                                    <div className="card-body">
+                                                        <h5 className="card-title">{blog.bName}</h5>
+                                                        <p className="card-text mt-2">{blog.bContent}</p>
+                                                        <p className="card-text"><small className="text-muted">3 min read</small></p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* blog1 ends */}                           
-                            {/* blog2 */}
-                            <div className="card px-md-3 mt-4">
-                                <div className="row align-items-center">
-                                    <div className="col-4 col-md-4 col-lg-2">
-                                        <img src={blog} alt="blog" className="img-fluid"/>
-                                    </div>
-                                    <div className="col cards">
-                                        <div className="card-body">
-                                            <h5 className="card-title">My second Blog</h5>
-                                            <p className="card-text mt-2">This is just lorem ipsum dummy text. I forgot how to use lorem ipsum, so i am typing this much. This is so repetitive. But i have to fill this space, what to do. Help me!!!</p>
-                                            <p className="card-text"><small className="text-muted">3 min read</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* blog2 ends */}
+                                    )
+                                })
+                            }                       
                         </div>
                     </div>
                 </div>

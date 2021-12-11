@@ -9,15 +9,39 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
+import axios from "axios";
+
 export class Profile extends Component {
     constructor(props) {
         super(props);
 
-        state = {
+        this.state = {
             user: sessionStorage.getItem('user'),
             profile: [],
-            blogs: []
+            blogs: [],
+            message: ""
         }
+    }
+
+    UNSAFE_componentWillMount() {
+
+        axios.get('https://spectrumcet.com/techonicle/getProfile.php?email=' + this.state.user)
+        .then((res) => {
+            if(res.data.status) {
+                this.setState({
+                    profile: res.data.user[0],
+                    message: res.data.response
+                });
+
+                console.log(this.state.profile.name);
+            } else {
+                this.setState({
+                    message: res.data.response
+                })
+            }
+        })
+        .catch(console.error());
+
     }
 
     render() {
@@ -32,7 +56,7 @@ export class Profile extends Component {
                             <img src={profile} alt="profile" className="profile" />
                         </div>
                         <div className="col-md-8 pt-md-3 pe-4 profile-text text-center text-md-start">
-                            <h4>Shreyas Arya</h4>
+                            <h4>{ this.state.profile.name }</h4>
                             <p className="mt-2">Product Design and Resource Management LIVE WORLD INC.</p>
                         </div>
                     </div>

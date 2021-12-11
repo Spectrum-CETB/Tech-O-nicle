@@ -6,16 +6,8 @@ import './Style.css';
 import { Link, Redirect } from 'react-router-dom';
 
 export class Homepage extends Component {
-    constructor(props) {
-      super(props);
-
-      this.state = {
-        loggedInUser: sessionStorage.getItem("user")
-      }
-    }
-
     render() {
-        if(this.state.loggedInUser) {
+        if(sessionStorage.getItem("user")) {
          return(
              <Redirect to = {'/dashboard'}/>
           )

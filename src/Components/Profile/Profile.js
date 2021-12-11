@@ -10,6 +10,16 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export class Profile extends Component {
+    constructor(props) {
+        super(props);
+
+        state = {
+            user: sessionStorage.getItem('user'),
+            profile: [],
+            blogs: []
+        }
+    }
+
     render() {
         return (
             <>

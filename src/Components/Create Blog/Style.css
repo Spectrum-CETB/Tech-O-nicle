@@ -31,10 +31,10 @@ input[type=text]{
 input[type=text]:focus {
     border: 3px solid #377379;
   }
-textarea[name=content]{
+textarea[name=bContent]{
     border: 3px solid #388087;
 }
-textarea[name=content]:focus{
+textarea[name=bContent]:focus{
     border: 3px solid #377379;
 }
 

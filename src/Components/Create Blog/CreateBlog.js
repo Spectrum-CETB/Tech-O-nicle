@@ -13,7 +13,13 @@ function CreateBlog() {
       ROS: false,
       ML: false,
       MERN: false,
-      Flutter: false
+      Flutter: false,
+      DataScience: false,
+      iOS: false,
+      IoT: false,
+      Javascript: false,
+      Reactjs: false,
+      SQL: false
     }
   });
 
@@ -23,6 +29,13 @@ function CreateBlog() {
     content: '',
     image: null
   })
+
+  const clearState = () => {
+    setBlog({ ...blog, title: "", creator: "", content: ""});
+    setState({ ...state, tags: ""})
+    state.tags.AI = false;
+    Object.keys(state.tags).map(k => (document.getElementsByName(k)[0].checked = false));
+  }
 
   function check(e) {
     var { name, checked } = e.target;
@@ -40,10 +53,15 @@ function CreateBlog() {
   const createBlogForm = (e) => {
     e.preventDefault();
 
+    let tags = displayTags.join();
     const formdata = new FormData(blogForm);
+    formdata.append("bTags", tags);
     axios.post('https://spectrumcet.com/techonicle/postBlog.php', formdata)
       .then((res) => {
-        console.log(res.data);
+        if(res.data.status === true){
+          clearState();
+        }
+        alert(res.data.status+ ", " + res.data.response);
       })
       .catch(err =>
         console.log(err));
@@ -61,7 +79,7 @@ function CreateBlog() {
             <div className="tag">
               <input type="checkbox" name="AI" onChange={check} /> AI&nbsp;<br />
               <input type="checkbox" name="Blockchain" onChange={check} /> Blockchain&nbsp;<br />
-              <input type="checkbox" name="Data Science" onChange={check} /> Data Science&nbsp;<br />
+              <input type="checkbox" name="DataScience" onChange={check} /> DataScience&nbsp;<br />
               <input type="checkbox" name="Flutter" onChange={check} /> Flutter&nbsp;<br />
               <input type="checkbox" name="Fullstack" onChange={check} /> Fullstack&nbsp;<br />
               <input type="checkbox" name="iOS" onChange={check} /> iOS&nbsp;<br />

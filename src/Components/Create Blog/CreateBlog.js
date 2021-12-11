@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './Style.css'
-
-
+import axios from 'axios';
 
 function CreateBlog() {
   const [state, setState] = useState({
@@ -14,9 +13,29 @@ function CreateBlog() {
       ROS: false,
       ML: false,
       MERN: false,
-      Flutter: false
+      Flutter: false,
+      DataScience: false,
+      iOS: false,
+      IoT: false,
+      Javascript: false,
+      Reactjs: false,
+      SQL: false
     }
   });
+
+  const [blog, setBlog] = useState({
+    title: '',
+    creator: '',
+    content: '',
+    image: null
+  })
+
+  const clearState = () => {
+    setBlog({ ...blog, title: "", creator: "", content: ""});
+    setState({ ...state, tags: ""})
+    state.tags.AI = false;
+    Object.keys(state.tags).map(k => (document.getElementsByName(k)[0].checked = false));
+  }
 
   function check(e) {
     var { name, checked } = e.target;
@@ -30,6 +49,24 @@ function CreateBlog() {
     }))
   };
 
+  const blogForm = document.getElementById('blogForm');
+  const createBlogForm = (e) => {
+    e.preventDefault();
+
+    let tags = displayTags.join();
+    const formdata = new FormData(blogForm);
+    formdata.append("bTags", tags);
+    axios.post('https://spectrumcet.com/techonicle/postBlog.php', formdata)
+      .then((res) => {
+        if(res.data.status === true){
+          clearState();
+        }
+        alert(res.data.status+ ", " + res.data.response);
+      })
+      .catch(err =>
+        console.log(err));
+  }
+
   var displayTags = Object.keys(state.tags).filter(tag => state.tags[tag]);
 
   return (
@@ -42,7 +79,7 @@ function CreateBlog() {
             <div className="tag">
               <input type="checkbox" name="AI" onChange={check} /> AI&nbsp;<br />
               <input type="checkbox" name="Blockchain" onChange={check} /> Blockchain&nbsp;<br />
-              <input type="checkbox" name="Data Science" onChange={check} /> Data Science&nbsp;<br />
+              <input type="checkbox" name="DataScience" onChange={check} /> DataScience&nbsp;<br />
               <input type="checkbox" name="Flutter" onChange={check} /> Flutter&nbsp;<br />
               <input type="checkbox" name="Fullstack" onChange={check} /> Fullstack&nbsp;<br />
               <input type="checkbox" name="iOS" onChange={check} /> iOS&nbsp;<br />
@@ -60,33 +97,43 @@ function CreateBlog() {
 
             <h5 className="att mb-3 mt-2">SELECTED TAGS: </h5>
             <div className="displayTags">
-              {displayTags.map( (e) => <span key={e} className="badges">{e}</span>)}
+              {displayTags.map((e) => <span key={e} className="badges">{e}</span>)}
             </div>
           </div>
 
           <div className="col-lg-9 col-md-8 col-sm-9">
-            <div className="right">
+            <div className="right me-md-5">
               <div className="panel panel-default">
 
 
                 <div className="panel-body">
-                  <form className="form-horizontal" method="POST">
+                  <form className="form-horizontal" method="POST" onSubmit={createBlogForm} id="blogForm">
                     <div className="form-group">
                       <div className="col-md-12 my-4">
-                        <input type="text" className="form-control" name="title" placeholder="Title of your blog..." />
+                        <input type="text" className="form-control" name="bName" placeholder="Title of your blog..." onChange={(e) => setBlog({ ...blog, title: e.target.value })} value={blog.title} />
                       </div>
                     </div>
                     <div className="form-group">
                       <div className="col-md-12 my-4">
-                        <input type="text" className="form-control" name="creator" placeholder="Creator of the blog..." />
+                        <input type="text" className="form-control" name="bCreator" placeholder="Creator of the blog..." onChange={(e) => setBlog({ ...blog, creator: e.target.value })} value={blog.creator} />
                       </div>
                     </div>
                     <div className="form-group">
                       <div className="col-md-12 my-3">
-                        <textarea name="content" className="form-control" cols="30" rows="17" placeholder="Content of your blog..."></textarea>
+                        <textarea name="bContent" className="form-control" cols="30" rows="14" placeholder="Content of your blog..." onChange={(e) => setBlog({ ...blog, content: e.target.value })} value={blog.content}></textarea>
                       </div>
                     </div>
-                    <div className="text-center">
+                    <div className="form-group uploadImage">
+                      <div className="row align-items-center">
+                        <div className="col-4 text-center">
+                          <h4>Select Blog Image:</h4>
+                        </div>
+                        <div className="col-8 my-3">
+                          <input type="file" name="bImage" accept=".jpg, .png .jpeg .webp" onChange={(e) => setBlog({ ...blog, image: e.target.files[0] })} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-center mt-3">
                       <button type="submit" className="btn btn-bumton btn-block bumton">
                         <i className="fa fa-btn fa-user"></i> Publish
                       </button>

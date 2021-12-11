@@ -24,9 +24,6 @@ h6, .tag{
     margin-left: 30px;
     color: #388087;
 }
-.right{
-    padding-right: 70px;
-}
 
 input[type=text]{
     border: 3px solid #388087;
@@ -34,15 +31,23 @@ input[type=text]{
 input[type=text]:focus {
     border: 3px solid #377379;
   }
-textarea[name=content]{
+textarea[name=bContent]{
     border: 3px solid #388087;
 }
-textarea[name=content]:focus{
+textarea[name=bContent]:focus{
     border: 3px solid #377379;
 }
 
 .displayTags{
     line-height: 40px;
+}
+
+h4{
+    color: #388087;
+}
+
+.uploadImage{
+    border: 3px solid #388087;
 }
 
 .badges{
@@ -54,3 +59,6 @@ textarea[name=content]:focus{
     margin: 5px !important;
 }
 
+
+
+    

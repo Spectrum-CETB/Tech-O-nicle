@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './style.css';
 import bannerImg from "./banner.webp";
 import profile from "./profile.webp";
-import blog from "./blog.webp"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'

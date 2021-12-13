@@ -34,6 +34,7 @@ export default class Feed extends Component {
                 items: 1
             }
         };
+        
         return (
             <div style={{ backgroundColor: '#F6F6F2' }}>
                 <div style={{ backgroundColor: 'wheat' }} className="pb-2 pt-2">

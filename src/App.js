@@ -22,7 +22,7 @@ function App() {
           <Navbar />
           <Feed />
         </Route>
-        <Route path="/blog/:id">
+        <Route path="/blog/:blogId">
           <Navbar />
           <SpecificBlog />
         </Route>

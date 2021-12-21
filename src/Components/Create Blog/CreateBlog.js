@@ -61,7 +61,7 @@ function CreateBlog() {
         if(res.data.status === true){
           clearState();
         }
-        alert(res.data.status+ ", " + res.data.response);
+        alert(res.data.status+ ", " + res.data.response + "," + res.data.bImg);
       })
       .catch(err =>
         console.log(err));

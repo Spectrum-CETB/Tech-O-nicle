@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import axios from "axios";
-
-import image from '../download.jpg'
-
 import Feeds from './Feeds.js'
 
 export class Trending extends Component {
@@ -63,7 +60,7 @@ export class Trending extends Component {
                     responsive={this.props.reponsive}
                 //removeArrowOnDeviceType={["tablet", "mobile"]}
                 >
-                    {tag.map(e => <Feeds img={image} val={e} key={e} />)}
+                    {tag.map(e => <Feeds /*img={`/images/${e}.webp`}*/ val={e} key={e} />)}
                 </Carousel>
             </div >
         )

@@ -24,7 +24,7 @@ div.content1{
     margin-right: 16px;
     object-fit: cover;
 }
-.imgdiv{
+.imgdiv img{
     height: 50px;
     width: 50px;
     border-radius: 50%;

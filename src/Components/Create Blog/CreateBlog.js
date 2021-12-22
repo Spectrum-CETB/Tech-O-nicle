@@ -22,7 +22,7 @@ function CreateBlog() {
       ML: false,
       IOT: false,
       AI: false,
-      ReactNative: false,
+      OpenCV: false,
       Flutter: false,
       Java: false,
       ROS: false,

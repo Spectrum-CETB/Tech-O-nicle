@@ -8,7 +8,7 @@ h3{
 }
 h6, .tag{
     position: relative !important;
-    right: -6% !important;
+    padding-left: 15px !important;
     color: #388087;
     font-weight: 600;
     font-size: large;

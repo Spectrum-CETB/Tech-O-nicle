@@ -5,23 +5,36 @@ import axios from 'axios';
 function CreateBlog() {
   const [state, setState] = useState({
     tags: {
-      Blockchain: false,
-      AI: false,
-      Fullstack: false,
-      PHP: false,
-      Kotlin: false,
-      ROS: false,
-      ML: false,
-      MERN: false,
-      Flutter: false,
-      DataScience: false,
-      iOS: false,
-      IoT: false,
+      HTML: false,
+      CSS: false,
       Javascript: false,
+      Typescript: false,
+      Blockchain: false,
       Reactjs: false,
-      SQL: false
+      Angular: false,
+      Vue: false,
+      PHP: false,
+      NodeJS: false,
+      Django: false,
+      Flask: false,
+      MySQL: false,
+      MongoDB: false,
+      ML: false,
+      IOT: false,
+      AI: false,
+      ReactNative: false,
+      Flutter: false,
+      Java: false,
+      ROS: false,
+      DataScience: false,
+      Arduino: false,
+      RaspberryPI: false,
+      Design: false,
+      GameDEV: false
     }
   });
+
+  const keys = Object.keys(state.tags);
 
   const [blog, setBlog] = useState({
     title: '',
@@ -31,10 +44,18 @@ function CreateBlog() {
   })
 
   const clearState = () => {
-    setBlog({ ...blog, title: "", creator: "", content: ""});
-    setState({ ...state, tags: ""})
-    state.tags.AI = false;
+    setBlog({ ...blog, title: "", creator: "", content: "" });
     Object.keys(state.tags).map(k => (document.getElementsByName(k)[0].checked = false));
+    keys.map(k =>
+      setState(new_state => ({
+        ...new_state,
+        tags: {
+          ...new_state.tags,
+          [k]: false,
+        }
+      }))
+    )
+
   }
 
   function check(e) {
@@ -58,10 +79,10 @@ function CreateBlog() {
     formdata.append("bTags", tags);
     axios.post('https://spectrumcet.com/techonicle/postBlog.php', formdata)
       .then((res) => {
-        if(res.data.status === true){
+        if (res.data.status === true) {
           clearState();
         }
-        alert(res.data.status+ ", " + res.data.response + "," + res.data.bImg);
+        alert(res.data.status + ", " + res.data.response + ", " + res.data.bImg);
       })
       .catch(err =>
         console.log(err));
@@ -70,51 +91,43 @@ function CreateBlog() {
   var displayTags = Object.keys(state.tags).filter(tag => state.tags[tag]);
 
   return (
-    <div className="bg">
-      <div className="container-fluid sb">
-        <div className="panel-heading hd"><h3 align="center"> 🖊 CREATE YOUR BLOG! 🖊</h3></div>
+    <div className="container-fluid bg">
+      <div className="container-fluid">
+        <div className="panel-heading hd pt-4 pb-1"><h3 align="center"> 🖊 CREATE YOUR BLOG! 🖊</h3></div>
         <div className="row">
-          <div className="col-lg-3 col-md-4 col-sm-3 attch">
-            <h5 className="att mt-2 mt-md-0">ATTACH TAGS: </h5>
-            <div className="tag">
-              <input type="checkbox" name="AI" onChange={check} /> AI&nbsp;<br />
-              <input type="checkbox" name="Blockchain" onChange={check} /> Blockchain&nbsp;<br />
-              <input type="checkbox" name="DataScience" onChange={check} /> DataScience&nbsp;<br />
-              <input type="checkbox" name="Flutter" onChange={check} /> Flutter&nbsp;<br />
-              <input type="checkbox" name="Fullstack" onChange={check} /> Fullstack&nbsp;<br />
-              <input type="checkbox" name="iOS" onChange={check} /> iOS&nbsp;<br />
-              <input type="checkbox" name="IoT" onChange={check} /> IoT&nbsp;<br />
-              <input type="checkbox" name="Javascript" onChange={check} /> Javascript&nbsp;<br />
-              <input type="checkbox" name="Kotlin" onChange={check} /> Kotlin&nbsp; <br />
-              <input type="checkbox" name="MERN" onChange={check} /> MERN&nbsp;<br />
-              <input type="checkbox" name="ML" onChange={check} /> ML&nbsp;<br />
-              <input type="checkbox" name="PHP" onChange={check} /> PHP&nbsp;<br />
-              <input type="checkbox" name="Reactjs" onChange={check} /> Reactjs&nbsp;<br />
-              <input type="checkbox" name="ROS" onChange={check} /> ROS&nbsp;<br />
-              <input type="checkbox" name="SQL" onChange={check} /> SQL&nbsp;<br />
+          <div className="col-lg-3 col-md-5 attch">
+            <h5 className="att mt-2 mt-md-0 py-2 pt-md-4">ATTACH TAGS: </h5>
+            <div className="tag row">
+              {Object.keys(state.tags).map(e => {
+                return <div className='col-6' key={e}>
+                  <input type="checkbox" name={e} onChange={check} />&nbsp;&nbsp;{e}<br />
+                </div>
+              }
+              )}
               <br />
             </div>
 
-            <h5 className="att mb-3 mt-2">SELECTED TAGS: </h5>
-            <div className="displayTags">
-              {displayTags.map((e) => <span key={e} className="badges">{e}</span>)}
+            <h5 className="att my-2 pt-2">SELECTED TAGS: </h5>
+            <div className="displayTags mb-3" id="displayTags">
+              {displayTags.map((e) => { return <span key={e} className="badges">{e}</span> })}
             </div>
           </div>
 
-          <div className="col-lg-9 col-md-8 col-sm-9">
-            <div className="right me-md-5">
+          <div className="col-lg-9 col-md-7">
+            <div className="right">
+
               <div className="panel panel-default">
 
 
-                <div className="panel-body">
+                <div className="panel-body px-2 px-lg-5">
                   <form className="form-horizontal" method="POST" onSubmit={createBlogForm} id="blogForm">
                     <div className="form-group">
-                      <div className="col-md-12 my-4">
+                      <div className="col-md-12 my-3">
                         <input type="text" className="form-control" name="bName" placeholder="Title of your blog..." onChange={(e) => setBlog({ ...blog, title: e.target.value })} value={blog.title} />
                       </div>
                     </div>
                     <div className="form-group">
-                      <div className="col-md-12 my-4">
+                      <div className="col-md-12 my-3">
                         <input type="text" className="form-control" name="bCreator" placeholder="Creator of the blog..." onChange={(e) => setBlog({ ...blog, creator: e.target.value })} value={blog.creator} />
                       </div>
                     </div>
@@ -125,16 +138,16 @@ function CreateBlog() {
                     </div>
                     <div className="form-group uploadImage">
                       <div className="row align-items-center">
-                        <div className="col-4 text-center">
+                        <div className="col-4 mt-1 mt-md-0 text-center">
                           <h4>Select Blog Image:</h4>
                         </div>
-                        <div className="col-8 my-3">
+                        <div className="col-8 my-3 text-center">
                           <input type="file" name="bImage" accept=".jpg, .png .jpeg .webp" onChange={(e) => setBlog({ ...blog, image: e.target.files[0] })} />
                         </div>
                       </div>
                     </div>
                     <div className="text-center mt-3">
-                      <button type="submit" className="btn btn-bumton btn-block bumton">
+                      <button type="submit" className="btn btn-bumton btn-block bumton mb-3">
                         <i className="fa fa-btn fa-user"></i> Publish
                       </button>
                     </div>
